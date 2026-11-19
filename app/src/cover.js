@@ -18,11 +18,17 @@ export const LAYOUTS = {
   grid: { label: 'Four panel grid', panels: 4 },
 };
 
+// Sunset overlay stops, top to bottom: warm orange, pink, then violet.
+// The violet stop is deliberately kept weak (0.14, down from 0.30): at full
+// strength it pooled at the bottom of the panel and turned white fabric,
+// like the fisherman's shirt in the sample shots, lavender.
+const SUNSET_OVERLAY_STOPS = ['rgba(255, 122, 26, 0.28)', 'rgba(255, 64, 129, 0.18)', 'rgba(88, 28, 135, 0.14)'];
+
 export const GRADES = {
   sunset: {
     label: 'Sunset',
     filter: 'saturate(1.3) contrast(1.06) brightness(1.03)',
-    overlay: ['rgba(255, 122, 26, 0.28)', 'rgba(255, 64, 129, 0.18)', 'rgba(88, 28, 135, 0.14)'],
+    overlay: SUNSET_OVERLAY_STOPS,
     blend: 'overlay',
   },
   neon: {
