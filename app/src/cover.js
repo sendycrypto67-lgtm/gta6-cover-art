@@ -22,7 +22,7 @@ export const GRADES = {
   sunset: {
     label: 'Sunset',
     filter: 'saturate(1.3) contrast(1.06) brightness(1.03)',
-    overlay: ['rgba(255, 122, 26, 0.28)', 'rgba(255, 64, 129, 0.22)', 'rgba(88, 28, 135, 0.30)'],
+    overlay: ['rgba(255, 122, 26, 0.28)', 'rgba(255, 64, 129, 0.18)', 'rgba(88, 28, 135, 0.14)'],
     blend: 'overlay',
   },
   neon: {
