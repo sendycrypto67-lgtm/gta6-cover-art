@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poster Cover Studio, GTA 6-style cover art maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Cover controls">
+    <h1>Poster Cover Studio</h1>
+    <p class="lede">Turn your photos into GTA 6-style multi-panel cover art. Free, offline,
+      and your photos never leave this device.</p>
+
+    <fieldset>
+      <legend>Layout</legend>
+      <div id="layout" class="chips"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Cover size</legend>
+      <div id="sizes" class="chips"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Selected panel</legend>
+      <div id="panel-tabs" class="chips"></div>
+      <div class="row">
+        <span class="field-label">Photo</span>
+        <div id="samples" class="chips"></div>
+        <label class="upload">Upload mine
+          <input id="upload" type="file" accept="image/*">
+        </label>
+      </div>
+      <label class="slider">Zoom
+        <input id="zoom" type="range" min="1" max="3" step="0.05" value="1">
+        <span id="zoom-val">1.0x</span>
+      </label>
+      <p class="hint">Drag the photo on the cover to move it inside its panel.</p>
+      <span class="field-label">Colour grade</span>
+      <div id="grades" class="chips"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Caption</legend>
+      <label>Words
+        <input id="caption" type="text" maxlength="40" value="Vice Coast">
+      </label>
+      <div id="cap-pos" class="chips"></div>
+    </fieldset>
+
+    <fieldset id="export">
+      <legend>Export PNG</legend>
+      <div class="chips">
+        <button type="button" class="chip export" data-size="square">1080 x 1080</button>
+        <button type="button" class="chip export" data-size="portrait">1080 x 1350</button>
+        <button type="button" class="chip export" data-size="wide">1920 x 1080</button>
+      </div>
+    </fieldset>
+
+    <p id="status" role="status"></p>
+    <p class="fine">A fan-made tool. Not affiliated with Rockstar Games. No logo,
+      artwork or font from the games is used here; the lettering is DejaVu Sans Bold,
+      a freely licensed font (see app/fonts/LICENSE-DejaVu.txt).</p>
+  </section>
+  <canvas id="cover" width="1080" height="1080" aria-label="The cover preview"></canvas>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
